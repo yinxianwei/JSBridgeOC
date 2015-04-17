@@ -14,6 +14,9 @@
 		8405BCA91AE0DDA5003567E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8405BCA81AE0DDA5003567E3 /* Images.xcassets */; };
 		8405BCAC1AE0DDA5003567E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8405BCAA1AE0DDA5003567E3 /* LaunchScreen.xib */; };
 		8405BCB81AE0DDA5003567E3 /* JSBridgeOCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405BCB71AE0DDA5003567E3 /* JSBridgeOCTests.m */; };
+		8405BCC51AE0DFA1003567E3 /* WebViewJavascriptBridge.js.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8405BCC31AE0DFA1003567E3 /* WebViewJavascriptBridge.js.txt */; };
+		8405BCC61AE0DFA1003567E3 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405BCC41AE0DFA1003567E3 /* WebViewJavascriptBridge.m */; };
+		8405BCC81AE0E06C003567E3 /* ExampleApp2.html in Resources */ = {isa = PBXBuildFile; fileRef = 8405BCC71AE0E06C003567E3 /* ExampleApp2.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,10 @@
 		8405BCB11AE0DDA5003567E3 /* JSBridgeOCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSBridgeOCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8405BCB61AE0DDA5003567E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8405BCB71AE0DDA5003567E3 /* JSBridgeOCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSBridgeOCTests.m; sourceTree = "<group>"; };
+		8405BCC21AE0DFA1003567E3 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		8405BCC31AE0DFA1003567E3 /* WebViewJavascriptBridge.js.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WebViewJavascriptBridge.js.txt; sourceTree = "<group>"; };
+		8405BCC41AE0DFA1003567E3 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		8405BCC71AE0E06C003567E3 /* ExampleApp2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ExampleApp2.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +88,8 @@
 		8405BC9A1AE0DDA5003567E3 /* JSBridgeOC */ = {
 			isa = PBXGroup;
 			children = (
+				8405BCC71AE0E06C003567E3 /* ExampleApp2.html */,
+				8405BCC11AE0DFA1003567E3 /* WebViewJavascriptBridge */,
 				8405BC9F1AE0DDA5003567E3 /* AppDelegate.h */,
 				8405BCA01AE0DDA5003567E3 /* AppDelegate.m */,
 				8405BCA21AE0DDA5003567E3 /* ViewController.h */,
@@ -117,6 +126,16 @@
 				8405BCB61AE0DDA5003567E3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8405BCC11AE0DFA1003567E3 /* WebViewJavascriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				8405BCC21AE0DFA1003567E3 /* WebViewJavascriptBridge.h */,
+				8405BCC31AE0DFA1003567E3 /* WebViewJavascriptBridge.js.txt */,
+				8405BCC41AE0DFA1003567E3 /* WebViewJavascriptBridge.m */,
+			);
+			path = WebViewJavascriptBridge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +218,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8405BCC81AE0E06C003567E3 /* ExampleApp2.html in Resources */,
+				8405BCC51AE0DFA1003567E3 /* WebViewJavascriptBridge.js.txt in Resources */,
 				8405BCA71AE0DDA5003567E3 /* Main.storyboard in Resources */,
 				8405BCAC1AE0DDA5003567E3 /* LaunchScreen.xib in Resources */,
 				8405BCA91AE0DDA5003567E3 /* Images.xcassets in Resources */,
@@ -220,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8405BCA41AE0DDA5003567E3 /* ViewController.m in Sources */,
+				8405BCC61AE0DFA1003567E3 /* WebViewJavascriptBridge.m in Sources */,
 				8405BCA11AE0DDA5003567E3 /* AppDelegate.m in Sources */,
 				8405BC9E1AE0DDA5003567E3 /* main.m in Sources */,
 			);

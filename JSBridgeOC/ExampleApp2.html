@@ -1,0 +1,62 @@
+<!doctype html>
+<html><head>
+    <style type='text/css'>
+        html { font-family:Helvetica; color:#222; }
+        h1 { color:steelblue; font-size:24px; margin-top:24px; }
+        button { margin:0 3px 10px; font-size:12px; }
+        .logLine { border-bottom:1px solid #ccc; padding:4px 2px; font-family:courier; font-size:11px; }
+        </style>
+</head><body>
+    <h1>WebViewJavascriptBridge Demo</h1>
+    
+    
+    <script>
+        window.onerror = function(err) {
+            log('window.onerror: ' + err)
+        }
+    
+    // document.addEventListener("事件名称", 函数, false);
+    // function 某函数(event){
+    //  // 方法执行
+    //
+    // }
+    // 如果为true事件执行顺序为 addEventListener ---- 标签的onclick事件 ---- document.onclick
+    // 如果为false事件的顺序为 标签的onclick事件 ---- document.onclick ---- addEventListener
+    document.addEventListener('WebViewJavascriptBridgeReady', onBridgeReady, false)
+    function onBridgeReady(event) {
+
+    //1. 首先声明注册通知需要回调的方法
+        var bridge = event.bridge
+        bridge.init(function(message, responseCallback) {
+                    //log('JS got a message', message)
+                    var data = { 'Javascript Responds':'Wee!' }
+                    //log('JS responding with', data)
+                    //弹出接收到的消息内容
+                    alert(message);
+                    responseCallback(data)
+                    })
+    //2. 注册通知
+        bridge.registerHandler('testJavascriptHandler', function(data, responseCallback) {
+                                           //log('ObjC called testJavascriptHandler with', data)
+                                           var responseData = { 'Javascript Says':'Right back atcha!' }
+                                           //log('JS responding with', responseData)
+                                           responseCallback(responseData)
+                                           })
+    //按钮添加发送消息方法
+    var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'))
+    callbackButton.innerHTML = '发送消息'
+    callbackButton.ontouchstart = function(e) {
+        e.preventDefault()
+    
+        bridge.callHandler('testObjcCallback', {'foo': 'bar'},
+                           function(response) {
+
+                           })
+        }
+
+    }
+    
+    
+    </script>
+    <div id='buttons'></div> <div id='log'></div>
+</body></html>
